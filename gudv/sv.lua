@@ -1,0 +1,7 @@
+RegisterServerEvent("GUDeleteVehicle:handler-sv")
+AddEventHandler("GUDeleteVehicle:handler-sv", function(tbl)
+	TriggerClientEvent("GUDeleteVehicle:handler", -1, tbl)
+end)
+lib.callback.register('GU:IsStaff', function(source)
+    return IsPlayerAceAllowed(source, "gu.staff")
+end)
